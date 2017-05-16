@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app>
+    <head>
+        <title>Iterating Over Data</title>
+    </head>
+    <body ng-init="people=[
+                   {name:'John', city:'Chicago', age:25},
+                   {name:'James', city:'New York', age:27},
+                   {name:'Matt', city:'San Jose', age:42},
+                   {name:'Mike', city:'Vegas', age:34}
+                   ]">
+        
+        
+        <ul>
+            <li ng-repeat="person in people">{{person.name}} lives in {{person.city}} is {{person.age}} years old</li>
+        </ul>
+        
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>City</td>
+                <td>Age</td>
+            </tr>
+            
+            <br />
+            <br />
+            <tr ng-repeat="person in people">
+                <td>{{person.name}}</td>
+                <td>{{person.city}}</td>
+                <td>{{person.age}}</td>
+            </tr>
+        </table>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    </body>
+</html>
